@@ -5,7 +5,7 @@
 <meta content="chrome=1" http-equiv="X-UA-Compatible"/>
 <meta content="yes" name="apple-mobile-web-app-capable"/>
 <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/>
-<title>slides_project_updated_W25T1 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
+<title>slides_classification1 slides</title><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script><script type="module">
   import mermaid from 'https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs';
   mermaid.initialize({ startOnLoad: true });
 </script>
@@ -7440,14 +7440,12 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="DSCI-100:-Introduction-to-Data-Science">DSCI 100: Introduction to Data Science<a class="anchor-link" href="#DSCI-100:-Introduction-to-Data-Science">¶</a></h1><!--
-![](https://plaicraft.ai/PLAICraftTitle.png)
--->
-<h2 id="Today:-Project-kickoff">Today: Project kickoff<a class="anchor-link" href="#Today:-Project-kickoff">¶</a></h2><ul>
-<li>Overview and requirements</li>
-<li>Get a brief understanding of classification and regression (more in the next lecture!)</li>
-<li>Project repository setup</li>
-</ul>
+<h1 id="DSCI-100---Introduction-to-Data-Science">DSCI 100 - Introduction to Data Science<a class="anchor-link" href="#DSCI-100---Introduction-to-Data-Science">¶</a></h1><h2 id="Lecture-6---Classification-using-K-Nearest-Neighbours">Lecture 6 - Classification using K-Nearest Neighbours<a class="anchor-link" href="#Lecture-6---Classification-using-K-Nearest-Neighbours">¶</a></h2><center>
+<img alt="No description has been provided for this image" src="https://www.tidymodels.org/images/cover.png" width="800"/>
+</center>
+Source: https://www.tidymodels.org/
+
+
 </div>
 </div>
 </div>
@@ -7458,18 +7456,11 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Project:-Predicting-Usage-of-a-Video-Game-Research-Server">Project: Predicting Usage of a Video Game Research Server<a class="anchor-link" href="#Project:-Predicting-Usage-of-a-Video-Game-Research-Server">¶</a></h2><p>This year we have a <strong>real data science project</strong> with <strong>real stakeholders</strong></p>
-<ul>
-<li>A group in CS at UBC is interested in understanding how people play video games</li>
-<li>They've set up a server running MineCraft and are recording play sessions</li>
-<li>Running the server is <em>not easy</em>: need to have the right hardware resources, software licenses, recruiting efforts, etc.</li>
-<li>The data:<ul>
-<li>Player skill level, demographic information</li>
-<li>Past play sessions</li>
-</ul>
-</li>
-</ul>
-<h2 id="Your-task">Your task<a class="anchor-link" href="#Your-task">¶</a></h2><p>Formulate and answer a <strong>predictive question</strong> about the data. Present the full analysis, from reading the data to communicating results.</p>
+<h3 id="Reminder">Reminder<a class="anchor-link" href="#Reminder">¶</a></h3><p>Where are we? Where are we going?</p>
+<center>
+<img alt="No description has been provided for this image" src="https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png" width="800"/>
+</center>
+<p><em>source: <a href="https://r4ds.had.co.nz/">R for Data Science</a> by Grolemund &amp; Wickham</em></p>
 </div>
 </div>
 </div>
@@ -7480,14 +7471,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li>What is <em>classification</em>?<ul>
-<li>Predict a <em>class/category</em> for a new observation/measurement</li>
-<li>Using past observations with <em>known</em> class/category</li>
-<li>Learn more in lecture 6 &amp; 7!</li>
-</ul>
-</li>
-</ul>
+<h2 id="Classification">Classification<a class="anchor-link" href="#Classification">¶</a></h2><p>Suppose we have past data of cancer tumour cell diagnosis labelled "benign" and "malignant". Do you think a new cell with Concavity = 3.3 and Perimeter = 0.2 would be malignant? How did you decide?</p>
+<center><img alt="No description has been provided for this image" src="https://datasciencebook.ca/_main_files/figure-html/05-multiknn-3-1.png" width="700"/></center>
 </div>
 </div>
 </div>
@@ -7498,121 +7483,107 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="What-kind-of-data-analysis-question-is-this?">What kind of data analysis question is this?<a class="anchor-link" href="#What-kind-of-data-analysis-question-is-this?">¶</a></h2><p>Descriptive, exploratory, predictive, inferential, causal, or mechanistic?</p>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Types of questions:</p>
 <ul>
-<li>What is <em>regression</em>?<ul>
-<li>Predict a <em>numerical value</em> for a new observation/measurement</li>
-<li>Using past observations with <em>known</em> numerical value</li>
-<li>Learn more in lecture 8 &amp; 9! (you will have to read ahead if you want to do this!)</li>
+<li>descriptive</li>
+<li>exploratory</li>
+<li><strong>predictive</strong></li>
+<li>inferential</li>
+<li>causal</li>
+<li>mechanistic</li>
 </ul>
-</li>
-</ul>
 </div>
 </div>
 </div>
-</div></div></section></section><section><section>
+</div>
+</aside></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Deliverables">Deliverables<a class="anchor-link" href="#Deliverables">¶</a></h2><ul>
-<li><strong>Team Contract</strong></li>
-<li><strong>Project Planning Stage (Individual)</strong><ul>
-<li>all the project details are in this item on Canvas!</li>
-</ul>
-</li>
-<li><strong>Final Project Report</strong></li>
-</ul>
-<p>See dates on Canvas</p>
+<h2 id="K-nearest-neighbours-classification">K-nearest neighbours classification<a class="anchor-link" href="#K-nearest-neighbours-classification">¶</a></h2><p><em>Predict the label / class for a new observation using the K closest points from our dataset.</em></p>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="One-Important-Note">One Important Note<a class="anchor-link" href="#One-Important-Note">¶</a></h2><p>This is new, untested <em>real data</em>. So the final conclusion of your project might be "we couldn't get <em>anything</em> out of this data."</p>
-<p><strong>That's totally fine and is just as valuable as a report that says "wow look at all the cool things we learned!"</strong>.</p>
-<p>Just make sure you:</p>
-<ul>
-<li>Critically analyze what happened: <em>why</em> things worked, or <em>why</em> they didn't</li>
-<li>Come up with suggestions for next steps ("collect this other data to actually see a useful signal!" or "this data has a lot of info left over, maybe try a fancier model like X!")</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Create-Repo-with-Template">Create Repo with Template<a class="anchor-link" href="#Create-Repo-with-Template">¶</a></h1><p><img alt="" src="img/group_project/project-template-use_template.png"/></p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ul>
-<li><p>Template URL: <a href="https://github.com/UBC-DSCI/dsci-100-project_template">https://github.com/UBC-DSCI/dsci-100-project_template</a></p>
-</li>
-<li><p>Click on "Use this template"</p>
-</li>
-<li><p>Why are we doing this?</p>
-<ul>
-<li>jupyter creates temp "checkpoint" files (for backup in case issue) in a folder <code>.ipynb_checkpoints</code></li>
-<li>We don't want to version control this file becuase it's not the actual work you want to track in version control</li>
-<li>You only want to version control files that matter, not temporary and backup files</li>
-</ul>
-</li>
-<li><p>The <code>.gitignore</code> file will "disappear" on jupyter lab, but you will see it in github</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Give-the-project-a-name">Give the project a name<a class="anchor-link" href="#Give-the-project-a-name">¶</a></h1><p><img alt="" src="img/group_project/project-template-create_repository.png"/></p>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Project-Template-Setup-Recap">Project Template Setup Recap<a class="anchor-link" href="#Project-Template-Setup-Recap">¶</a></h1><ol>
-<li>Go to the template repository<ul>
-<li><a href="https://github.com/UBC-DSCI/dsci-100-project_template">https://github.com/UBC-DSCI/dsci-100-project_template</a></li>
-</ul>
-</li>
-<li>Click "Use this template" and create a repository with the template repository</li>
-<li>Clone the repository from the owner's repo into their JupyterHub<ul>
-<li><a href="https://datasciencebook.ca/version-control.html#cloning-a-repository-using-jupyter">https://datasciencebook.ca/version-control.html#cloning-a-repository-using-jupyter</a></li>
-<li>Note: Put this in your home folder, <strong>DO NOT</strong> clone into your <code>dsci-100-student</code> folder. If you do, move it out.</li>
-<li>multiple people can have the same repo name, but within any given user, all the repo names need to be unique</li>
-</ul>
-</li>
+<ol>
+<li>Compute the distance between the new observation and each observation in our <em>training set</em><br/><br/></li>
 </ol>
-<p><img alt="" src="img/group_project/project-template-home_folder.png"/></p>
+<center>
+<img alt="No description has been provided for this image" src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-knn-4-1.png" width="600"/></center>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<center>
+$\text{Distance} = \sqrt{(x_{\text{new}} - x_{\text{train}})^2 + (y_{\text{new}} - y_{\text{train}})^2}$
+</center>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>point is at perimeter= 0.2, concavity = 3.3</li>
+<li>Recall from your reading, the training dataset is the sample of data used to fit the model.</li>
+<li>Suppose we have a set of data and we want to predict the class of a new observation</li>
+<li>we want to calculate the distance between the new observation and the other points</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="K-nearest-neighbours-classification">K-nearest neighbours classification<a class="anchor-link" href="#K-nearest-neighbours-classification">¶</a></h2><p><em>Predict the label / class for a new observation using the K closest points from our dataset.</em></p>
+<ol start="2">
+<li>Sort the data in ascending order according to the distances</li>
+<li>Choose the top K rows as "neighbours"</li>
+</ol>
+<pre><code>## # A tibble: 5 x 5
+##        ID Perimeter Concavity Class dist_from_new
+##     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;fct&gt;         &lt;dbl&gt;
+## 1   86409     0.241      2.65 B             0.881
+## 2  887181     0.750      2.87 M             0.980
+## 3  899667     0.623      2.54 M             1.14 
+## 4  907914     0.417      2.31 M             1.26 
+## 5 8710441    -1.16       4.04 B             1.28
+</code></pre>
 </div>
 </div>
 </div>
@@ -7623,37 +7594,515 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Activity-%231:-Explore-Datasets---Preliminary">Activity #1: Explore Datasets - Preliminary<a class="anchor-link" href="#Activity-%231:-Explore-Datasets---Preliminary">¶</a></h2><p>project assignment details on Canvas</p>
+<h2 id="K-nearest-neighbours-classification">K-nearest neighbours classification<a class="anchor-link" href="#K-nearest-neighbours-classification">¶</a></h2><p><em>Predict the label / class for a new observation using the K closest points from our dataset.</em></p>
+<ol start="4">
+<li>Classify the new observation based on majority vote.</li>
+</ol>
+<center>
+<img alt="No description has been provided for this image" src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-knn-5-1.png" width="600"/>
+</center>
+<h3 id="What-would-the-predicted-class-be?">What would the predicted class be?<a class="anchor-link" href="#What-would-the-predicted-class-be?">¶</a></h3>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="We-can-go-beyond-2-predictors">We can go beyond 2 predictors<a class="anchor-link" href="#We-can-go-beyond-2-predictors">¶</a></h2><p>For two observations $u, v$, each with $m$ variables (columns) labelled $1, \dots, m$,
+<br/>
+<br/></p>
+<center>
+   $\text{Distance} = \sqrt{(u_1-v_1)^2 + (u_2-v_2)^2 + \dots + (u_m - v_m)^2}$ 
+</center>
+<p>Aside from that, it's the same algorithm!</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Standardizing-Data">Standardizing Data<a class="anchor-link" href="#Standardizing-Data">¶</a></h2><center><img src="img/scaling_example1.png" width="600"/></center>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<center><img src="img/scaling_example2.png" width="600"/></center>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>Using what you have learnt in weeks 1-4, read the dataset, take a look at it, and write a short description about the dataset.</li>
-<li>Some questions you should try to answer:<ul>
-<li>What is the dataset about?</li>
-<li>How many variables are there?</li>
-<li>How many observations are there?</li>
+<li>When using K-nearest neighbour classification, the scale of each variable (i.e., its size and range of values) matters. e.g. Salary (10,000+) and Age (0-100)</li>
+<li>Since the classifier predicts classes by identifying observations that are nearest to it, any variables that have a large scale will have a much larger effect than variables with a small scale.</li>
+<li>But just because a variable has a large scale doesn’t mean that it is more important for making accurate predictions.</li>
+<li>For example, suppose you have a data set with two attributes, height (in feet) and weight (in pounds).</li>
 </ul>
+<p>distance1 = sqrt((202 - 200)^2 + (6 - 6)^2) = 2</p>
+<p>distance2 = sqrt((200 - 200)^2 + (8 - 6)^2) = 2</p>
+<p>Here if we calculate the distance we get 2 in both cases! A difference of 2 pounds is not that big, but a different in 2 feet is a lot. So how can we adjust for this?</p>
+</div>
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Nonstandardized-Data">Nonstandardized Data<a class="anchor-link" href="#Nonstandardized-Data">¶</a></h2><p>What if one variable is much larger than the other?</p>
+<br/>
+<center>
+<img src="img/nonstd.png" width="800"/>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Nonstandardized-Data">Nonstandardized Data<a class="anchor-link" href="#Nonstandardized-Data">¶</a></h2><p>What if one variable is much larger than the other?</p>
+<br/>
+<center>
+<img alt="No description has been provided for this image" src="https://datasciencebook.ca/_main_files/figure-html/05-scaling-plt-zoomed-1.png" width="1200"/>
+</center>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Nonstandardized-Data-vs-Standardized-Data">Nonstandardized Data vs Standardized Data<a class="anchor-link" href="#Nonstandardized-Data-vs-Standardized-Data">¶</a></h2><p>What if one variable is much larger than the other?</p>
+<p><em>Standardize:</em> shift and scale so that the average is 0 and the standard deviation is 1.</p>
+<br/>
+<center>
+<img alt="No description has been provided for this image" src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-scaling-plt-1.png" width="1200"/>
+</center>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li><p>Standardization: when all variables in a data set have a mean (center) of 0 and a standard deviation (scale) of 1, we say that the data have been standardized.</p>
+</li>
+<li><p>In the plot with the original data above, its very clear that K-nearest neighbours would classify the red dot (new observation) as malignant. However, once we standardize the data, the diagnosis class labelling becomes less clear, and appears it would depend upon the choice of<br>
+K.</br></p>
+</li>
+<li><p>Thus, standardizing the data can change things in an important way when we are using predictive algorithms. As a rule of thumb, standardizing your data should be a part of the preprocessing you do before any predictive modelling / analysis.</p>
+</li>
+<li><p>In many other predictive models, the center of each variable (e.g., its mean) matters as well. For example, if we had a data set with a temperature variable measured in degrees Kelvin, and the same data set with temperature measured in degrees Celcius, the two variables would differ by a constant shift of 273 (even though they contain exactly the same information). Likewise in our hypothetical job classification example, we would likely see that the center of the salary variable is in the tens of thousands, while the center of the years of education variable is in the single digits.</p>
+</li>
+<li><p>Although this doesn’t affect the K-nearest neighbour classification algorithm, this large shift can change the outcome of using many other predictive models.</p>
 </li>
 </ul>
-<h2 id="Activity-%232:-Explore-Datasets-Part-2---Outcome-Variable">Activity #2: Explore Datasets Part 2 - Outcome Variable<a class="anchor-link" href="#Activity-%232:-Explore-Datasets-Part-2---Outcome-Variable">¶</a></h2><ul>
-<li>Try to answer these questions now:<ul>
-<li>Identify the main outcome/categorical/label variable in the dataset.</li>
-<li>How many values/groups are in this variable?</li>
-<li>How many observations are there in each value/group?</li>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><p><code>tidymodels</code> is a collection of packages and handles computing distances, standardization, balancing, and prediction for us!</p>
+<center>
+<img alt="No description has been provided for this image" src="https://i0.wp.com/rviews.rstudio.com/post/2019-06-14-a-gentle-intro-to-tidymodels_files/figure-html/tidymodels.png?zoom=2&amp;w=578&amp;ssl=1" width="800"/>
+</center>
+Source: https://www.r-bloggers.com/2019/06/a-gentle-introduction-to-tidymodels/
+
+
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>tidymodels? consistency.</li>
+<li>R open source -- made by different people and using different principles, everything has a slightly different interface, and trying to keep everything in line can be frustrating</li>
+<li>aim: uniform interface for variety of models that exist in R</li>
 </ul>
-</li>
-<li>Tip: Think about how you are organising your workbook: add more code and markdown cells (and arranged them!) to keep your notebook neat</li>
-</ul>
-<h2 id="Activity-%233:-Explore-Datasets-Part-3---Visualisations!">Activity #3: Explore Datasets Part 3 - Visualisations!<a class="anchor-link" href="#Activity-%233:-Explore-Datasets-Part-3---Visualisations!">¶</a></h2><ul>
-<li>Make some visualisations of the outcome variable:<ul>
-<li>What does the distribution of the variable look like?</li>
-<li>What relationship does it have with some of the other variables?</li>
-</ul>
-</li>
-<li>Tip: Try using a range of box plots, scatterplots, bar charts, line graphs, etc.</li>
-</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><ol start="0">
+<li>Load the libraries and data we need (new: <code>tidymodels</code>)</li>
+</ol>
 </div>
 </div>
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="nf">library</span><span class="p">(</span><span class="n">tidyverse</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">tidymodels</span><span class="p">)</span>
+<span class="nf">options</span><span class="p">(</span><span class="n">repr.matrix.max.rows</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+
+<span class="c1"># Data on cancer tumors</span>
+<span class="n">tumors</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_csv</span><span class="p">(</span><span class="s">"data/clean-wdbc.data.csv"</span><span class="p">)</span><span class="w"> </span><span class="o">|&gt;</span>
+<span class="w">    </span><span class="nf">mutate</span><span class="p">(</span><span class="n">Class</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">as_factor</span><span class="p">(</span><span class="n">Class</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><p>0b. Inspect the data</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="n">tumors</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><p>In <code>tidymodels</code>, the <code>recipes</code> package is named after cooking terms.</p>
+<h3 id="1.-Make-a-recipe-to-specify-the-predictors/response-and-preprocess-the-data">1. Make a <code>recipe</code> to specify the predictors/response and preprocess the data<a class="anchor-link" href="#1.-Make-a-recipe-to-specify-the-predictors/response-and-preprocess-the-data">¶</a></h3><ol>
+<li><p><code>recipe()</code>:  Main argument in the formula.</p>
+<p>Arguments:</p>
+<ul>
+<li>formula</li>
+<li>data</li>
+</ul>
+</li>
+<li><p><code>prep()</code> &amp; <code>bake()</code>: you can also <code>prep</code> and <code>bake</code> a recipe to see what the preprocessing does!</p>
+</li>
+</ol>
+<ul>
+<li>visit <a href="https://recipes.tidymodels.org/reference/index.html">https://recipes.tidymodels.org/reference/index.html</a> to see all the preprocessing steps</li>
+</ul>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><code>prep()</code> and <code>bake</code>?</p>
+<ul>
+<li><p>The <code>prep()</code> function computes everything so that the preprocessing steps can be executed</p>
+</li>
+<li><p>The <code>bake()</code> function takes a recipe and applies it to data and returns data</p>
+</li>
+<li><p>If you want to extract the pre-processed dataset: you can <code>prep()</code> and <code>bake()</code> but extracting the pre-processed data isn’t necessary for the pipeline, since this will be done under the hood when the model is fit</p>
+</li>
+<li><p>will be covered more next week</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="n">tumors</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nf">head</span><span class="p">(</span><span class="m">2</span><span class="p">)</span>
+
+<span class="c1"># Standardize the cancer data</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>tumor_recipe &lt;- recipe(Class ~ Perimeter + Concavity, data=tumors) |&gt;
+                  step_center(all_predictors()) |&gt;
+                  step_scale(all_predictors()) 
+tumor_recipe           
+</code></pre>
+<ul>
+<li>first argument "Model formula"</li>
+<li>Left hand side of ~: "response" / thing we are trying to predict (can selectively remove, but another step)</li>
+<li>Right hand side: whatever columns you want to use as predictors (could use a . to use everything as a predictor)</li>
+<li>second argument: data frame</li>
+<li>pre-processing steps to standardize data</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><h3 id="2.-Build-a-model-specification-(model_spec)-to-specify-the-model-and-training-algorithm">2. Build a model specification (<code>model_spec</code>) to specify the model and training algorithm<a class="anchor-link" href="#2.-Build-a-model-specification-(model_spec)-to-specify-the-model-and-training-algorithm">¶</a></h3><ol>
+<li><p><strong>model type</strong>: kind of model you want to fit</p>
+</li>
+<li><p><strong>arguments</strong>: model parameter values</p>
+</li>
+<li><p><strong>engine</strong>: underlying package the model should come from</p>
+</li>
+<li><p><strong>mode</strong>: type of prediction (some packages can do both classification and regression)</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="c1"># Build a model specification using nearest_neighbor</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>tumor_model &lt;- nearest_neighbor(weight_func = "rectangular", neighbors = 3) |&gt;
+       set_engine("kknn") |&gt;
+       set_mode("classification")
+
+tumor_model
+</code></pre>
+<ul>
+<li>container for information about a model that will be fit</li>
+<li>intended to be functionally independent of the data. model specification does not interact with the data</li>
+<li>most R functions immediately evaluate their arguments. <code>parsnip</code> model functions do not</li>
+<li>save the argument expressions to be evaluated later when <code>fit()</code> called with the actual data.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><h3 id="3.-Put-them-together-in-a-workflow-and-then-fit-it">3. Put them together in a workflow and then <code>fit</code> it<a class="anchor-link" href="#3.-Put-them-together-in-a-workflow-and-then-fit-it">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="c1"># Create a workflow</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>tumor_workflow &lt;- workflow() |&gt;
+    add_recipe(tumor_recipe) |&gt;
+    add_model(tumor_model)
+
+tumor_fit &lt;- tumor_workflow |&gt;
+    fit(data=tumors)
+
+tumor_workflow
+</code></pre>
+<ul>
+<li>We may want to use our recipe across several steps as we train and test our model. To simplify this process, we can use a model workflow, which pairs a model and recipe together.</li>
+<li>single function that can be used to prepare the recipe and train the model from the resulting predictors</li>
+<li><code>wdbc_workflow</code> -- still haven’t implemented the pre-processing steps in the recipe nor fit the model. just the framework.</li>
+<li><code>wdbc_fit</code>: now the recipe and model frameworks are actually implemented</li>
+<li>Show both objects but don't talk about stats from <code>fit</code></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Introduction-to-the-tidymodels-package-in-R">Introduction to the <code>tidymodels</code> package in R<a class="anchor-link" href="#Introduction-to-the-tidymodels-package-in-R">¶</a></h2><h3 id="4.-Predict-a-new-class-label-using-predict">4. Predict a new class label using <code>predict</code><a class="anchor-link" href="#4.-Predict-a-new-class-label-using-predict">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-r"><pre><span></span><span class="n">new_obs</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">tibble</span><span class="p">(</span><span class="n">Perimeter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span><span class="p">,</span><span class="w"> </span><span class="n">Concavity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<center>
+<img alt="No description has been provided for this image" src="https://ubc-dsci.github.io/introduction-to-datascience/_main_files/figure-html/05-knn-5-1.png" width="600"/>
+</center>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>predict(tumor_fit, new_obs)
+</code></pre>
+<ul>
+<li><code>predict()</code> applies the recipe to the new data, then passes them to the fitted model.</li>
+<li>What would happen to the prediction if we changed <code>Perimeter</code> to <code>-2</code>?</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</aside></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Go-forth-and-...-model?">Go forth and ... model?<a class="anchor-link" href="#Go-forth-and-...-model?">¶</a></h2><br/>
+<img align="left" alt="No description has been provided for this image" src="https://i.imgflip.com/2q2nlu.jpg" width="500"/>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="What-did-we-learn-today?">What did we learn today?<a class="anchor-link" href="#What-did-we-learn-today?">¶</a></h1><ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7667,7 +8116,24 @@ main {
 </div>
 </div>
 </div>
-</div></section></section>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<pre><code>head(iris)
+options(repr.plot.width = 6, repr.plot.height = 3)
+ggplot(iris, aes(x = Petal.Length, y = Petal.Width, color = Species)) +
+    geom_point() + 
+    labs( x= "Petal Length (cm)", y = "Petal Width (cm)")
+</code></pre>
+</div>
+</div>
+</div>
+</div>
+</aside></div></section></section>
 </div>
 </div>
 </main>
